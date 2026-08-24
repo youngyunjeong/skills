@@ -1,0 +1,8 @@
+# Editor/OS noise
+.DS_Store
+*.swp
+
+# Local-only workspace files
+.env
+.envrc
+notes/
