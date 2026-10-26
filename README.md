@@ -48,11 +48,20 @@ Repository path: `skills/workflow/`
 | `pair-programming` | Step-by-step collaborative implementation in an isolated worktree, with the user reviewing every step and no commit until they say so. |
 | `triaging-sentry-issues` | Deciding whether a Sentry alert is stale noise, a tracked bug, or an incident, by checking the event against the build actually in production. |
 
+### Writing
+
+Repository path: `skills/writing/`
+
+| Skill | Use it for |
+| --- | --- |
+| `minimal-writing-reviewer` | Reviewing, proofreading, and refining Korean and English documents, prose, and UI copy against a project ruleset or a minimal, zero-redundancy baseline. |
+
 ## Structure
 
 ```
-skills/<category>/<skill-name>/SKILL.md   # the skill itself
+skills/<category>/<skill-name>/SKILL.md     # the skill itself
 skills/<category>/<skill-name>/references/  # detail read on demand
+skills/<category>/<skill-name>/evals/       # golden test cases and assertions
 ```
 
 `SKILL.md` stays short enough to load in full.

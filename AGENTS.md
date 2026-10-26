@@ -29,7 +29,7 @@ A skill belongs here only when it works in a repository the author has never see
 - Frontmatter carries `name` and `description` only.
 - The `description` states what the skill does and when to reach for it, and ends with trigger phrases in both English and Korean.
 - Keep `SKILL.md` loadable in one read. Move templates, tables, and syntax detail into `references/` and reference them from the step that needs them.
-- Keep supporting material inside the skill directory under `references/`, `scripts/`, or `assets/`.
+- Keep supporting material inside the skill directory under `references/`, `evals/`, `scripts/`, or `assets/`.
 - Prefer `<verb-ing>-<object>` names, but keep an established practice name when the gerund would distort the meaning.
 
 ## Repository Structure
