@@ -60,26 +60,35 @@ Reusing a repository or project file is not a failure by itself; only what ships
 
 ### 2. Skeleton
 
-Fail when the candidate's screen flows follow another of the developer's apps as a template.
-Compare these four flows against each comparison app:
+Compare the candidate's screen flows with each comparison app.
+Flow matches are warnings; they fail the item only together with the swap test from item 3.
+
+Compare these flows:
 
 - Onboarding: the order and purpose of its steps.
-- Paywall: its structure, meaning layout, plan presentation, and call to action.
 - Theme or content picker: how the user chooses what they see.
 - Widget guide: how the app teaches widget setup.
+- Paywall: only its non-standard parts. A highlighted lifetime plan next to a monthly plan with a skip button is an industry-standard pattern and never counts as a match.
 
-Fail when two or more of the four match a single comparison app.
-A flow matches when, with app names hidden, a reviewer could not tell the two apart.
-Do not count matching screen file names or code-line similarity: approved sibling apps can share file names, and a rejected app can share none.
+A flow matches when its structure, step order, and layout follow the comparison app's flow.
+Record every match as a warning in the report, even when the item passes.
+Fail when two or more flows match a single comparison app and the screens of two or more of those matching flows fail the swap test.
+Do not count matching screen file names or code-line similarity.
+
+Flow counting alone does not separate approved sibling apps from rejected ones: approved siblings can match on most flows when their visual language differs.
+That the swap test separates them is an estimate from a small sample; record it as an assumption.
 
 ### 3. First Impression
 
 Fail when either holds:
 
 - The core action is not visible in screenshots 1 and 2 and on the app's first screen.
-- Two or more of onboarding, paywall, widget, and the last screenshot share the same template copy or layout with another of the developer's apps.
+- Two or more of onboarding, paywall, theme or content picker, widget guide, and the last screenshot fail the swap test against a single comparison app.
 
-Judge by placing the two apps' screens side by side.
+The swap test: hide logos and app names, place the two apps' screens for the same flow side by side, and ask whether one app's screen could be swapped into the other app without a reader noticing.
+A screen fails the swap test when it could.
+Different typography, palette, texture, illustration or mascot, language, or button copy makes screens distinguishable even when their structure matches.
+For the paywall, judge only its look; the standard plan layout is not evidence either way.
 
 ### 4. Concept
 
@@ -102,4 +111,4 @@ Approved sibling apps often share it, so treat it as a weak signal: it fails the
 ## Report
 
 Lead with the decision: submission request allowed, or blocked with the failing items listed.
-Then give the five-row table from `references/report-template.md` with evidence and the fix for each failure, followed by open questions and assumptions.
+Then give the five-row table from `references/report-template.md` with evidence and the fix for each failure, then the skeleton warnings, followed by open questions and assumptions.
