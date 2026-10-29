@@ -45,6 +45,7 @@ Repository path: `skills/workflow/`
 | Skill | Use it for |
 | --- | --- |
 | `creating-github-issues` | Turning a request, bug report, or finding into a GitHub issue with an executable plan and correct labels. |
+| `checking-app-store-4-3-risk` | Checking an iOS app against the developer's other live and rejected apps on five items before App Store submission, and blocking submission when any item could read as 4.3 spam. |
 | `pair-programming` | Step-by-step collaborative implementation in an isolated worktree, with the user reviewing every step and no commit until they say so. |
 | `triaging-sentry-issues` | Deciding whether a Sentry alert is stale noise, a tracked bug, or an incident, by checking the event against the build actually in production. |
 
